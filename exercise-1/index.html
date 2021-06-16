@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="entry"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+<script id="list-template" type="text/x-handlebars-template">
+    <div>
+        <ul class="list">
+            {{#each this}}
+                <li>
+                    <div>{{name}}</div>
+                    <div>
+                        <img src="{{avatar}}" />
+                    </div>
+                    <div>{{createdAt}}</div>
+                    <div>{{id}}</div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
